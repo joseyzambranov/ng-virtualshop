@@ -1,21 +1,30 @@
-<header class="l-header" id="header">
+<header class="l-header " id="header" >
     <nav class="nav bd-grid">
         <div class="nav__toggle" (click)="showMenu()">
             <i class='bx bxs-grid '></i>
         </div>
-        <a href="#" class="nav__logo">VIRTUAL SHOP</a>
-        <div class="nav__menu"  [ngClass]="{'show': flag ,'':!flag}">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                <li class="nav__item"><a href="#featured" class="nav__link">Featured</a></li>
-                <li class="nav__item"><a href="#women" class="nav__link">Women</a></li>
-                <li class="nav__item"><a href="#new" class="nav__link">New</a></li>
-                <li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li>
+        <a href="#" class="nav__logo"></a>
+        <div 
+        class="nav__menu"  
+        [ngClass]="{'show': flag ,'':!flag}"    
+        >
+            <ul class="nav__list" (click)="removeMenu()"  >
+                <li class="nav__item"><a [class.selected]="scroll >= 0 && scroll < 50"
+                                         class="nav__link "
+                                         href="#home"
+                                        >Home</a></li>
+                <li class="nav__item"><a [class.selected]="scroll >= 50 "
+                                        href="#featured"
+                                         class="nav__link" 
+                                         >Featured</a></li>
+                <li class="nav__item"><a  href="#women" class="nav__link" name="women">Women</a></li>
+                <li class="nav__item"><a  href="#new" class="nav__link" name="new">New</a></li>
+                <li class="nav__item"><a href="shop.html" class="nav__link" name="shop" #section4>Shop</a></li>
             </ul>
         </div>
         <div class="nav__btns">
             <!--theme change button-->
-            <i class='bx bx-moon change__theme' id="theme-button"></i>
+            <i [ngClass]=" {'bx-sun': dark ,'bx-moon':!dark}" class='bx change__theme' id="theme-button" (click)="darkTheme()" ></i>
             <div class="nav__shop">
                 <i class='bx bx-shopping-bag '></i>
             </div>

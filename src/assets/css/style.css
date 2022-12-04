@@ -238,20 +238,7 @@ i:hover{
 .show{
     left: 0;
 }
-/*active link*/
-.active{
-    position: relative;
-}
-.active::before{
-    content: '';
-    position: absolute;
-    bottom: -.5rem;
-    left: 45%;
-    width: 4px;
-    height: 4px;
-    background-color: var(--black-color);
-    border-radius: 50%;
-}
+
 /*change color header*/
 
 .scroll-header{

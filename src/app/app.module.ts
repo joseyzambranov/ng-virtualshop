@@ -10,6 +10,7 @@ import { FeaturedComponent } from './components/featured/featured.component';
 import { OfferComponent } from './components/offer/offer.component';
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
